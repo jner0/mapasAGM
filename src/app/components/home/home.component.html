@@ -1,0 +1,22 @@
+<section class="container mt-3">
+    <h1>Geolocalizacion Google Maps</h1>
+    <hr>
+    <div class="card mapa">
+        <!--Le pasamos un INPUT y un OUTPUT-->
+        <agm-map [latitude]="lat" [longitude]="long" [zoom]="17">
+            <!--Para marcar la ubicacion-->
+            <agm-marker [latitude]="lat" [longitude]="long" [iconUrl]="$any({url:'', scaledSize:{}})"> <!--El iconUrl me sirve para cambiar el icono del marker-->
+                <agm-info-window>
+                    <h5 class="text-danger">La casa de Nemecio Rodriguez</h5>
+                    <hr>
+                    <p>Alguna Informacion</p>
+                    <ul>
+                        <li>Latitud: {{lat}}</li>
+                        <li>Longitud: {{long}}</li>
+                    </ul>
+                    <a href="http://www.google.com" class="btn btn-danger">Ver detalle</a>
+                </agm-info-window>
+            </agm-marker> 
+        </agm-map>
+    </div>
+</section>
