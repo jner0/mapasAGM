@@ -8,12 +8,16 @@ import { HomeComponent } from './components/home/home.component';
 import { EuropwComponent } from './components/europw/europw.component';
 import { AgmCoreModule } from '@agm/core';
 import { environment } from 'src/environments/environment';
+import { CountryViewComponent } from './components/country-view/country-view.component';
+import { MonedaPipe } from './pipes/moneda.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    EuropwComponent
+    EuropwComponent,
+    CountryViewComponent,
+    MonedaPipe
   ],
   imports: [
     BrowserModule,

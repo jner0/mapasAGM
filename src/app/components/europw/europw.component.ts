@@ -10,6 +10,11 @@ import { CountriesService } from 'src/app/services/countries.service';
 export class EuropwComponent implements OnInit {
 
   arrCountries: Country[] = [];
+  lat: number = 40;
+  long: number = 3;
+  zoom: number = 5;
+
+
   constructor(
     private countriesService: CountriesService
   ) { }

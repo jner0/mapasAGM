@@ -15,4 +15,8 @@ export class CountriesService {
     //promesas
     return lastValueFrom(this.httpClient.get<Country[]>(`${this.baseUrl}region/${pRegion}`))
   }
+
+  getByCode(pCode: string) : Promise<Country[]>{ 
+    return lastValueFrom(this.httpClient.get<Country[]>(`${this.baseUrl}alpha/${pCode}`))
+  }
 }

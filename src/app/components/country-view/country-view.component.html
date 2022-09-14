@@ -1,0 +1,24 @@
+<section class="container">
+
+    <div class="card mt-5 p-4">
+        <h2 class="card-title">{{myCountry.name.common}}</h2>
+        <hr>
+        <div class="row">
+            <figure class="col-12 col-md-3">
+                <img [src]="myCountry?.flags!.svg" class="img-fluid shadow">
+            </figure>
+            <div class="col-12 col-md-9">
+                <ul>
+                    <li>Poblacion:{{myCountry?.population | number}}</li>
+                    <li>Moneda: {{myCountry?.currencies | moneda}}</li>
+                    <li>Superficie: {{myCountry?.area | number}} km<sup>2</sup></li>
+                    <li>Capital:{{myCountry?.capital}</li>
+                </ul>
+                <h4 class="text-ruted" *ngIf="myCountry?.unMember">Este pais es miembro de la union europea</h4>
+                <a [routerLink]="['/europe']" class="btn btn-danger">Volver al Mapa</a>
+            </div>
+            
+        </div>
+    </div>
+
+</section>
